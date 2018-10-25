@@ -19,17 +19,21 @@
   </select>
 </nav>
 <!--Mucha atención con el elemento que sigue-->
-<script src="https://d3js.org/d3.v5.min.js"></script>
-      <script> 
+     <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script>        
          var w = 980, h = 350, f = 0.5, p=1;
+         
          d3.json("https://mindicador.cl/api/dolar").then(function(data) {
             var precios = d3.values(data.serie);
             console.log(precios);
-         var svg = d3.select("#here")
+
+
+         var svg = d3.select("body")
                   .append("svg")
                   .attr("width", w)
                   .attr("height", h)
                   .style("background","#EEEEEE");
+
          svg.selectAll("rect")
             .data(precios)
             .enter()
@@ -47,6 +51,7 @@
             .attr("fill", function(d) {
                return "rgb(0, 0, " + (d.valor * f) + ")";
             });
+
          svg.selectAll("text")
             .data(precios)
             .enter()
@@ -63,7 +68,7 @@
             })
             .attr("font-family", "sans-serif")
             .attr("font-size", "11px")
-            .attr("fill", "white");  
+            .attr("fill", "white");      
          })
       </script>
 <!--Creo el elemento y pongo los elementos dentro suyo mediante una biblioteca de JavaScript que opera con SVG, HTML y datos-->
