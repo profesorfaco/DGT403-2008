@@ -23,6 +23,18 @@
     <text x="200" y="200" fill="gray" text-anchor="middle">Hola SVG!</text>
   </a>
   Utilizaremos este elemento, y su propio dialecto.
-</svg> 
+</svg>
+  
+  <script>
+var request = new XMLHttpRequest();
+request.open('GET', 'http://api.open-notify.org/astros.json', true);
+request.onload = function () {
+	var data = JSON.parse(this.response);
+	console.log(data);
+}
+request.send();
+</script>
+  
+  
 </body>
 </html>
