@@ -19,3 +19,15 @@ La tarea que se recomienda resolver a la brevedad posible es buscar datos de int
 (jQuery y las `*.js` son bibliotecas de JavaScript)
 
 El resultado esperado tendrá que parecerse a https://luissalazarfigueroa.github.io/Evaluacion2/
+
+**¿De dónde puedo sacar datos?**
+
+https://es.datachile.io
+http://datos.gob.cl
+http://bancodatosene.ine.cl/
+http://www.mifuturo.cl/
+https://datos.bancomundial.org/pais/chile?view=chart
+
+**¿De dónde puedo sacar interés?**
+
+No sé. 
