@@ -1,4 +1,4 @@
-Comenzamos a explorar visualización de datos, utilizando https://leafletjs.com/
+**Comenzamos a explorar visualización de datos utilizando https://leafletjs.com/**
 
 La tarea que se recomienda resolver a la brevedad posible es buscar datos de interés personal, con los que se pueda alimentar una página web que haremos con: 
 
