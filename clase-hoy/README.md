@@ -2,9 +2,9 @@
 
 La tarea que se recomienda resolver a la brevedad posible es buscar datos de interés personal, con los que se pueda alimentar una página web que haremos con: 
 
-- ajustando theme de Bootstrap
+- un theme de Bootstrap
 
-- jQuery
+- algo de jQuery
 
 - leaflet.js
 
