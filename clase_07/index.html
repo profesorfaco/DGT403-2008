@@ -50,7 +50,7 @@
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <!--Favor revisar https://www.w3schools.com/html/html5_video.asp-->
-            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+            <source src="media/videoplayback.mp4" type="video/mp4">
         </video>
         <div class="container h-100">
             <div class="d-flex text-center h-100">
@@ -67,8 +67,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-                    <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+                    <h2 class="text-white mb-4">EL USO DE GASES LACRIMOGENOS EN CHILE</h2>
+                    <p class="text-white-50">El uso de gases lacrimógenos constituye una potencial amenaza o perturbación de diversos derechos garantizados por el texto constitucional vigente en Chile, cuyo respeto y promoción es deber de los órganos del Estado.
+                        <br /><cite><a href="https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0718-52002016000100007">Fernando Muñoz León (2016)</a></cite></p>
                 </div>
             </div>
             <img src="media/ipad.png" class="img-fluid" alt="">
@@ -86,8 +87,8 @@
                 </div>
                 <div class="col-xl-4 col-lg-5">
                     <div class="featured-text text-center text-lg-left">
-                        <h4>Mapa</h4>
-                        <p class="text-black-50 mb-0">Entre las últimas líneas del código fuente encontrarán un script que parte con un "var mymap = L.map('leaflet')…", con todo ese script se dibuja el mapa.</p>
+                        <h4>7 excelentes lugares para avistar ballenas en Chile</h4>
+                        <p class="text-black-50 mb-0">Las costas de Chile son un lugar privilegiado para el avistamiento de cetáceos, con más de 40 especies que surcan nuestras aguas. En <a href="https://laderasur.com/destino/7-excelentes-lugares-para-avistar-ballenas-en-chile/" target="_blank">Ladera Sur</a>, crearon una lista con 7 lugares para ver ballenas como la majestuosa ballena azul, la activa ballena jorobada o la pequeña minke, entre otras</p>
                     </div>
                 </div>
             </div>
@@ -101,8 +102,9 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white">Gráfico uno</h4>
-                                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                                <h4 class="text-white">Tamaños de los misticetos chilenos</h4>
+                                <p class="mb-0 text-white-50">En las costas de Chile, se han registrado 43 especies de cetáceos, es decir, alrededor del 40% de todas las especies del planeta. Entre estas especies, que incluyen a las ballenas, delfines y marsopas, queremos comparar el tamaño de <a href="https://es.wikipedia.org/wiki/Anexo:Cet%C3%A1ceos_de_Chile#Mysticeti_en_Chile" target="_blank">los misticetos (Mysticeti)</a>, conocidos comúnmente como ballenas barbadas. 
+                                </p>
                                 <hr class="d-none d-lg-block mb-0 ml-0">
                             </div>
                         </div>
@@ -151,7 +153,7 @@
         (function($) {
             "use strict"; // Start of use strict
 
-            $(".titular").text("Título Aquí");
+            $(".titular").text("Ballenas en las costas chilenas");
         })(jQuery); // End of use strict
     </script>
 
@@ -215,7 +217,25 @@
     <!--esto es para un gráfico -->
 
     <script>
-        d3.select("#chart-1").attr("width", "100%").attr("height", "400").style("background", "red");
+
+        var ballenas = [
+        {especie: "Ballena franca austral", metros: 14 },
+        {especie: "Ballena franca enana", metros: 7.5 },
+        {especie: "Ballenas Minke", metros:5.5},
+        {especie:"Rorcual Austral", metros:7},
+        {especie:"Rorcual Norteño", metros:18},
+        {especie:"Rorcual de Bryde", metros:15},
+        {especie:"Rorcual Azul", metros:30},
+        {especie:"Rorcual Común", metros:27},
+        {especie:"Ballena jorobada", metros:16}
+        ];
+
+        var coso = d3.select("#chart-1").attr("width", "100%").attr("height", "420").style("background", "RGBA(0, 181, 232, 1.00)");
+
+        coso.selectAll("rect").data(ballenas).enter().append("rect").attr("x",40).attr("y", function(d, i) { return (i + 1) * 40; }).attr("width", function(d) { return d.metros*10 }).attr("height",30).attr("fill","RGBA(220, 255, 255, 1.00)")
+
+         coso.selectAll("text").data(ballenas).enter().append("text").text(function(d) {return (d.especie + " (" + d.metros + " m)")}).attr("text-anchor", "start").attr("x", function(d, i) { return (d.metros*10)+50 }).attr("y", function(d, i) { return ((i + 1) * 40)+20 }).attr("font-family", "sans-serif").attr("font-size", "12px").attr("fill", "white"); 
+
     </script>
 
     <!--esto es para otro gráfico -->
