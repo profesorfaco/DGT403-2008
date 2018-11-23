@@ -3,7 +3,7 @@
 
 El curso se divide en 2 partes. 
 
-La primera parte, de FrontEnd, se desarrolla en la primera mitad del semestre:
+La primera parte, de **FrontEnd**, se desarrolla en la primera mitad del semestre:
 
 | Clase | Fecha                   | /Carpeta     |
 |:-----:|-------------------------| ------------ |
@@ -16,4 +16,4 @@ La primera parte, de FrontEnd, se desarrolla en la primera mitad del semestre:
 |   7   | Jueves 22 de noviembre  | /clase_07    |
 |   8   | Jueves 29 de noviembre  | /clase_08    |
 
-La segunda parte, de UI/UX, se desarrolla en la segunda mitad.
+La segunda parte, de **UI/UX**, se desarrolla en la segunda mitad.
